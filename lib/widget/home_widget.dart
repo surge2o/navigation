@@ -5,9 +5,15 @@ class HomeWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SafeArea(
+    return SafeArea(
       child: Center(
-        child: Text('home'),
+        child: ListView.builder(
+            itemCount: 10,
+            itemBuilder: ((context, index) {
+              return const ListTile(
+                leading: Icon(Icons.person),
+              );
+            })),
       ),
     );
   }
