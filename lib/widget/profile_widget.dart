@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:ilundry/providers/counter.dart';
+import 'package:provider/provider.dart';
 
 class ProfileWidget extends StatelessWidget {
   const ProfileWidget({super.key});
@@ -33,7 +35,7 @@ class ProfileWidget extends StatelessWidget {
               children: [
                 ElevatedButton(
                   onPressed: () {},
-                  child: const Text("Favorite"),
+                  child: Text("Favorite ${context.watch<Couter>().number.toString()}"),
                 ),
                 const Icon(Icons.add)
               ],

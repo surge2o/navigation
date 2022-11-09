@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:ilundry/providers/counter.dart';
 import 'package:ilundry/widget/favourite_widget.dart';
 import 'package:ilundry/widget/home_widget.dart';
 import 'package:ilundry/widget/profile_widget.dart';
+import 'package:provider/provider.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -12,10 +14,10 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int selectedIndex = 0;
-  static const List<Widget> appbarWidget = <Widget>[
+  static List<Widget> appbarWidget = <Widget>[
     Text('home'),
-    Text('favourite'),
-    Text('profile'),
+    const Text('favourite'),
+    const Text('profile'),
   ];
   static const List _widgetOption = <Widget>[
     HomeWidget(),

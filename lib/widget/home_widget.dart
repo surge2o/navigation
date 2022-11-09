@@ -32,11 +32,6 @@ class ContactList extends StatelessWidget {
             icon: const Icon(Icons.add), 
             label: const Text("Add"),
           ),
-          // trailing: IconButton(
-          //   onPressed: (){}, 
-          //   icon: const Icon(Icons.add),
-            
-          // )
         );
       }
       );
